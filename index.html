@@ -6,136 +6,357 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Can I eat it?</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title has-text-centered">
-          Can I eat it?
-        </h1>
-        <h2 class="subtitle has-text-centered">
-          Want to eat something but have food allergy? We're here to help you!
-        </h2>
-      </div>
-    </div>
-  </section>
   <div class="container">
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">
+            Can I eat it?
+          </h1>
+          <h2 class="subtitle has-text-centered">
+            Want to eat something but have food allergy? We're here to help you!
+          </h2>
+        </div>
+      </div>
+    </section>
 
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="dropdown dropdown1">
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>Allergies</span>
-              <!-- <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span> -->
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                Dairy
-              </a>
-              <a class="dropdown-item">
-                Eggs
-              </a>
-              <a href="#" class="dropdown-item is-active">
-                Peanuts
-              </a>
-              <a href="#" class="dropdown-item">
-                Soy
-              </a>
-              <a href="#" class="dropdown-item">
-                Wheat
-              </a>
-              <a href="#" class="dropdown-item">
-                Tree Nuts
-              </a> <a href="#" class="dropdown-item">
-                Fish
-              </a> <a href="#" class="dropdown-item">
-                Shellfish
-              </a>
+    <!-- section for spacing -->
+    <section class="section">
+      <div class="container">
+        <!-- tiles for organization and appearance -->
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification is-primary has-text-centered">
+                  <p class="title">1. Allergies!</p>
+                  <p class="subtitle">Check your Allergies!</p>
+                  <div class="dropdown dropdown1">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>1. Allergies</span>
+                        <!-- <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          Dairy
+                        </a>
+                        <a class="dropdown-item">
+                          Eggs
+                        </a>
+                        <a href="#" class="dropdown-item is-active">
+                          Peanuts
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Soy
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Wheat
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Tree Nuts
+                        </a> <a href="#" class="dropdown-item">
+                          Fish
+                        </a> <a href="#" class="dropdown-item">
+                          Shellfish
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </article>
+
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification  has-text-centered">
+                  <!-- is-info -->
+                  <p class="title">2. Category!</p>
+                  <p class="subtitle">What are you eating?</p>
+                  <div class="dropdown dropdown2">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>2. Category!</span>
+                        <!-- <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          Breakfast
+                        </a>
+                        <a class="dropdown-item">
+                          Lunch
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Dinner
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Snack
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Drink
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure> -->
+                </article>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification has-text-centered">
+                <!-- is-danger -->
+                <p class="title">3. Barcode!</p>
+                <p class="subtitle">Enter the barcode!</p>
+                <!-- <div class="content"> -->
+                <!-- Content -->
+                <h2 class="has-text-centered">Find it here!</h2>
+                <!-- barcode image -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
+                  style="height: 150px; width: 200px; background-color: white; border-style: solid; border-color: black; border-radius: 5px;;">
+                <!-- barcode input -->
+                <div class="field">
+                  <div class="control" style="width: 215px;">
+                    <textarea class="textarea is-small is-primary has-fixed-size" placeholder="1234567890128" rows="1"
+                      style="font-size: 25px;"></textarea>
+                  </div>
+                </div>
+                <!-- search button -->
+                <button class="button is-success is-large">Search!</button>
+
+
+                <!-- </div> -->
+              </article>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="column">
-        <div class="dropdown dropdown2">
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>Category</span>
-              <!-- <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span> -->
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                Breakfast
-              </a>
-              <a class="dropdown-item">
-                Lunch
-              </a>
-              <a href="#" class="dropdown-item">
-                Dinner
-              </a>
-              <a href="#" class="dropdown-item">
-                Snack
-              </a>
-              <a href="#" class="dropdown-item">
-                Drink
-              </a>
+    <!-- section for spacing -->
+    <section class="section">
+      <div class="container">
+        <!-- tiles for organization and appearance -->
+        <div class="tile is-ancestor">
+          <div class="tile">
+            <div class="tile">
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-primary has-text-centered">
+                  <p class="title">1. Allergies!</p>
+                  <!-- <p class="subtitle">Top tile</p> -->
+                  <div class="dropdown dropdown1">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>1. Allergies</span>
+                        <!-- <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          Dairy
+                        </a>
+                        <a class="dropdown-item">
+                          Eggs
+                        </a>
+                        <a href="#" class="dropdown-item is-active">
+                          Peanuts
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Soy
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Wheat
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Tree Nuts
+                        </a> <a href="#" class="dropdown-item">
+                          Fish
+                        </a> <a href="#" class="dropdown-item">
+                          Shellfish
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </article>
+
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info has-text-centered">
+                  <p class="title">2. Category!</p>
+                  <!-- <p class="subtitle">With an image</p> -->
+                  <div class="dropdown dropdown2">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>2. Category!</span>
+                        <!-- <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          Breakfast
+                        </a>
+                        <a class="dropdown-item">
+                          Lunch
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Dinner
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Snack
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Drink
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure> -->
+                </article>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-danger has-text-centered">
+                <p class="title">3. Barcode!</p>
+                <!-- <p class="subtitle">Aligned with the right tile</p> -->
+                <div class="content">
+                  <!-- Content -->
+                  <div class="field">
+                    <div class="control">
+                      <textarea class="textarea is-small is-primary has-fixed-size" placeholder="1234567890128" rows="1"
+                        style="font-size: 25px;"></textarea>
+                    </div>
+                  </div>
+                  <h2 class="has-text-centered">Find it here!</h2>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
+                    style="height: 100px; width: 100px;">
+                  <button class="button is-success is-large">Search!</button>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-
-
-    </div>
-
-
-    <div class="columns is-mobile">
-      <div class="column is-half is-offset-one-quarter">
-        <div class="field">
-          <div class="control">
-            <textarea class="textarea is-large is-primary" placeholder="BARCODE"></textarea>
+    <!-- tiles implementation above -->
+    <!-- original columns implementation below -->
+    <!-- <section class="section ">
+      <div class="container">
+        <div class="columns is-mobile is-centered is-vcentered">
+          <div class="column  has-text-centered">
+            <div class="dropdown dropdown1">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>Allergies</span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Dairy
+                  </a>
+                  <a class="dropdown-item">
+                    Eggs
+                  </a>
+                  <a href="#" class="dropdown-item is-active">
+                    Peanuts
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Soy
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Wheat
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Tree Nuts
+                  </a> <a href="#" class="dropdown-item">
+                    Fish
+                  </a> <a href="#" class="dropdown-item">
+                    Shellfish
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="column has-text-centered">
+            <div class="dropdown dropdown2">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>Category</span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Breakfast
+                  </a>
+                  <a class="dropdown-item">
+                    Lunch
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Dinner
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Snack
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Drink
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="columns is-mobile">
-      <div class="column is-half is-offset-one-quarter">
-        <h2 class="has-text-centered">Find it here!</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
-          style="height: 100px; width: 100px;">
-      </div>
-    </div>
-
-    <div class="columns is-mobile">
-      <div class="column is-half is-offset-one-quarter">
-      <button class="button is-success is-large">Large</button>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+        <div class="columns is-mobile">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="field">
+              <div class="control">
+                <textarea class="textarea is-small is-primary has-fixed-size" placeholder="BARCODE" rows="1"
+                  style="font-size: 25px;"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="columns is-centered is-vcentered is-mobile">
+          <div class="column is-half has-text-centered">
+            <h2 class="has-text-centered">Find it here!</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
+              style="height: 100px; width: 100px;">
+          </div>
+        </div>
+  
+        <div class="columns is-centered is-vcentered is-mobile">
+          <div class="column is-half has-text-centered">
+            <button class="button is-success is-large">Search!</button>
+          </div>
+        </div> -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
