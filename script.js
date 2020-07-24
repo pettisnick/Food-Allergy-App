@@ -1,15 +1,21 @@
 $(document).ready(function () {
-    var dropdown = $('.dropdown1');
-    dropdown.on('click', function(event) {
+  var allergyDrop = $('.allergy-dropdown');
+  allergyDrop.on('click', function (event) {
       event.preventDefault();
-      dropdown.toggleClass('is-active');
-    });
+      allergyDrop.toggleClass('is-active');
+  });
 
-      var dropdown2 = $('.dropdown2');
-    dropdown2.on('click', function(event) {
+  var categoryDrop = $('.category-dropdown');
+  categoryDrop.on('click', function (event) {
       event.preventDefault();
-      dropdown2.toggleClass('is-active');
-    });
+      categoryDrop.toggleClass('is-active');
+  });
+
+  $('.allergy-item').on('click', function (event) {
+      console.log("Food Allergy: " + (event.target.text).trim());
+  });
+
+  $('.category-item').on('click', function (event) {
+    console.log("Food Category: " + (event.target.text).trim());
 });
-
-       
+});
