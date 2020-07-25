@@ -1,4 +1,4 @@
-var foodName, allergyInput, categoryInput, upcInput, safeToEat;
+var foodName, userAllergy, allergyInput, categoryInput, upcInput, safeToEat;
 
 $(document).ready(function () {
     var allergyDrop = $('.allergy-dropdown');
@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     $('.allergy-item').on('click', function (event) {
-        var userAllergy = event.target.text.trim();
+        userAllergy = event.target.text.trim();
         $('#allergy-display').text(userAllergy);
         convertAllergy(userAllergy);
     });
@@ -107,10 +107,16 @@ function storeData() {
     console.log(safeToEat);
     var foodObject = {
         name: foodName,
-        allergy: allergyInput,
+        allergy: userAllergy,
         category: categoryInput,
         item: upcInput,
         searchResult: safeToEat,
     }
-    localStorage.setItem("user-search", JSON.stringify(foodObject));
+    localStorage.setItem(foodName, JSON.stringify(foodObject));
+    localStorage.setItem("lastKey", foodName);
+    resultsScreen();
+}
+
+function resultsScreen() {
+    window.location.href = "./results.html";
 }

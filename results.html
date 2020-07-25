@@ -29,7 +29,7 @@
           <div class="tile">
             <div class="tile is-parent is-vertical">
               <article class="tile is-child notification is-primary has-text-centered">
-                <div class="dropdown is-active">
+                <div class="dropdown search-dropdown">
                   <div class="dropdown-trigger">
                     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                       <span>Search History</span>
@@ -39,27 +39,10 @@
                     </button>
                   </div>
                   <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                      <a href="#" class="dropdown-item">
-                        Dropdown item
-                      </a>
-                      <a class="dropdown-item">
-                        Other dropdown item
-                      </a>
-                      <a href="#" class="dropdown-item is-active">
-                        Active dropdown item
-                      </a>
-                      <a href="#" class="dropdown-item">
-                        Other dropdown item
-                      </a>
-                      <hr class="dropdown-divider">
-                      <a href="#" class="dropdown-item">
-                        With a divider
-                      </a>
-                    </div>
+                    <div class="dropdown-content history-content"></div>
                   </div>
-                </div> 
-                
+                </div>
+
               </article>
             </div>
 
@@ -74,7 +57,8 @@
             <div class="tile is-parent is-vertical">
               <article class="tile is-child notification is-primary has-text-centered">
                 <div class="control">
-                  <input class="input has-text-centered" id="categoryInput" type="text" value="Food Category Input" readonly>
+                  <input class="input has-text-centered" id="categoryInput" type="text" value="Food Category Input"
+                    readonly>
                 </div>
               </article>
             </div>
@@ -86,28 +70,28 @@
                 </div>
               </article>
             </div>
-          
+
           </div>
 
           <div class="tile is-parent">
             <article class="tile is-child notification has-text-centered is-info">
-               <!-- is-danger -->
-               <p class="title">Results!</p>
-               <!-- <div class="content"> -->
-                             
-               <!-- result image -->
-               <img src="not-found.png" style="height: 150px; width: 200px;">
-               <!-- barcode input -->
-                              
+              <!-- is-danger -->
+              <p id="resultPhrase" class="title">Results!</p>
+              <!-- <div class="content"> -->
+
+              <!-- result image -->
+              <img id="results-img" src="#" style="height: 150px; width: 200px;">
+              <!-- barcode input -->
+
               <p class="title">Alternatives in food category</p>
-                <img src="not-found.png" style="height: 150px; width: 200px;">
-                <img src="not-found.png" style="height: 150px; width: 200px;">
+              <img src="#" style="height: 150px; width: 200px;">
+              <img src="#" style="height: 150px; width: 200px;">
               <p class="link">If you don't like these, check out this page for more suggestions!</p>
               <a href="https//www.eatthis.com/allergy-free-snacks/" target="_blank">Eat This, Not That!</a>
               <!-- search again button -->
               <div class="buttons is-centered">
                 <button class="button is-success is-large">Search Again</button>
-              
+
             </article>
           </div>
         </div>
@@ -115,11 +99,14 @@
     </div>
 
 
-   
 
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="results.js"></script>
 </body>
 
 </html>
