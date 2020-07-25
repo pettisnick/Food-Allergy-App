@@ -1,4 +1,4 @@
-var allergyInput, categoryInput, upcInput, safeToEat;
+var foodName, allergyInput, categoryInput, upcInput, safeToEat;
 
 $(document).ready(function () {
     var allergyDrop = $('.allergy-dropdown');
@@ -63,6 +63,7 @@ function getData() {
     })
         .then(function (response) {
             console.log(response);
+            foodName = response.hints[0].food.label; //get food label of user's barcode input
             var foodID = response.hints[0].food.foodId; //get food ID of user's barcode input
             console.log(foodID);
             getHealthLabel(foodID);
@@ -105,6 +106,7 @@ function getData() {
 function storeData() {
     console.log(safeToEat);
     var foodObject = {
+        name: foodName,
         allergy: allergyInput,
         category: categoryInput,
         item: upcInput,
