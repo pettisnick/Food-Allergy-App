@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Can I Eat?</title>
+  <title>Can I Eat It?</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
 
@@ -22,55 +22,100 @@
     </div>
   </section>
 
-  <class class="columns is-mobile">
-    <div class="column is-one-quarter">
-      <!--<code>is-one-quarter</code>-->
-      <div class="control">
-        <input class="input" type="text" value="Search History" readonly>
-      </div>
-    </div>
-    <div class="column is-one-quarter">
-      <!--<code>is-one-quarter</code>-->
-      <div class="control">
-        <input class="input" type="text" value="Allergy Inputted" readonly>
-      </div>
-    </div>
-    <div class="column is-one-quarter">
-      <!--<code>is-one-quarter</code>-->
-      <div class="control">
-        <input class="input" type="text" value="Food Category Inputted" readonly>
-      </div>
-    </div>
-    <div class="column is-one-quarter">
-      <!--<code>is-one-quarter</code>-->
-      <div class="control">
-        <input class="input" type="text" value="Food Item Inputted" readonly>
+  <section class="section is-primary">
+    <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary has-text-centered">
+                <div class="dropdown is-active">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Search History</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Dropdown item
+                      </a>
+                      <a class="dropdown-item">
+                        Other dropdown item
+                      </a>
+                      <a href="#" class="dropdown-item is-active">
+                        Active dropdown item
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Other dropdown item
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                        With a divider
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+                
+              </article>
+            </div>
+
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary has-text-centered">
+                <div class="control">
+                  <input class="input has-text-centered" id="allergyInput" type="text" value="Allergy Input" readonly>
+                </div>
+              </article>
+            </div>
+
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary has-text-centered">
+                <div class="control">
+                  <input class="input has-text-centered" id="categoryInput" type="text" value="Food Category Input" readonly>
+                </div>
+              </article>
+            </div>
+
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary has-text-centered">
+                <div class="control">
+                  <input class="input has-text-centered" id="itemInput" type="text" value="Food Item Input" readonly>
+                </div>
+              </article>
+            </div>
+          
+          </div>
+
+          <div class="tile is-parent">
+            <article class="tile is-child notification has-text-centered is-info">
+               <!-- is-danger -->
+               <p class="title">Results!</p>
+               <!-- <div class="content"> -->
+                             
+               <!-- result image -->
+               <img src="not-found.png" style="height: 150px; width: 200px;">
+               <!-- barcode input -->
+                              
+              <p class="title">Alternatives in food category</p>
+                <img src="not-found.png" style="height: 150px; width: 200px;">
+                <img src="not-found.png" style="height: 150px; width: 200px;">
+              <p class="link">If you don't like these, check out this page for more suggestions!</p>
+              <a href="https//www.eatthis.com/allergy-free-snacks/" target="_blank">Eat This, Not That!</a>
+              <!-- search again button -->
+              <div class="buttons is-centered">
+                <button class="button is-success is-large">Search Again</button>
+              
+            </article>
+          </div>
+        </div>
       </div>
     </div>
 
-  </class>
 
-  <div class="columns is-mobile">
-    <div class="column is-half is-offset-one-quarter">
-      <h2 class="has-text-centered">RESULTS</h2>
-      <figure class="image is-128x128">
-        <img src="https://www.iconsdb.com/icons/preview/color/2BE337/check-mark-3-xxl.png">
-      </figure>
-      <figure class="image is-128x128">
-        <img src="https://www.iconsdb.com/icons/preview/red/x-mark-xxl.png">
-      </figure>
-      <figure class="image is-128x128">
-        <img src="https://www.iconsdb.com/icons/preview/color/050505/question-mark-4-xxl.png">
-      </figure>
-    </div>
-  </div>
-
-  <div class="columns is-mobile">
-    <div class="column is-half is-offset-one-quarter">
-      <h5 class="has-text-centered">Alternatives in food category</h5>
-      
-    </div>
-  </div>  
+   
 
 
 
