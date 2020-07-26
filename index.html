@@ -28,21 +28,24 @@
     <section class="section">
       <div class="container">
         <!-- tiles for organization and appearance -->
+        <!-- top level tile element -->
         <div class="tile is-ancestor">
+          <!-- 2nd level tile element - arranges its sub-tiles vertically -->
           <div class="tile is-vertical">
+            <!-- this tile contains 1. Allergies and 2. Category -->
             <div class="tile">
-              <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification  has-text-centered" style="background-color: #C6FFDD; border: 2px solid black;">
-                  <!-- is-primary -->
+              <!-- parent tile of 1. Allergies -->
+              <div class="tile is-parent">
+                <!-- 1. Allergies tile -->
+                <article class="tile is-child notification  has-text-centered"
+                  style="background-color: #C6FFDD; border: 2px solid black;">
                   <p class="title">1. Allergies!</p>
                   <p class="subtitle">Check your Allergies!</p>
                   <div class="dropdown allergy-dropdown">
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>1. Allergies</span>
-                        <!-- <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span> -->
+                        <span id="allergy-display">1. Allergies</span>
+                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -74,22 +77,20 @@
                       </div>
                     </div>
                   </div>
-
                 </article>
-
               </div>
+              <!-- parent tile of 2. Category! -->
               <div class="tile is-parent">
-                <article class="tile is-child notification has-text-centered" style="background-color: #FBD786; border: 2px solid black;">
-                  <!-- is-info -->
+                <!-- 2. Category Tile -->
+                <article class="tile is-child notification has-text-centered"
+                  style="background-color: #FBD786; border: 2px solid black;">
                   <p class="title">2. Category!</p>
                   <p class="subtitle">What are you eating?</p>
                   <div class="dropdown category-dropdown">
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>2. Category!</span>
-                        <!-- <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span> -->
+                        <span id="category-display">2. Category!</span>
+                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -112,15 +113,15 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                  </figure> -->
                 </article>
               </div>
             </div>
+
+            <!-- parent tile of 3. Barcode! -->
             <div class="tile is-parent">
-              <article class="tile is-child notification has-text-centered" style="background-color: #f7797d; color: white; border: 2px solid black;">
+              <!-- Barcode tile! -->
+              <article class="tile is-child notification has-text-centered"
+                style="background-color: #f7797d; color: white; border: 2px solid black;">
                 <!-- is-danger -->
                 <p class="title">3. Barcode!</p>
                 <p class="subtitle">Enter the barcode UPC!</p>
@@ -136,35 +137,29 @@
                   <div class="column is-narrow">
                     <div class="field">
                       <div class="control" style="width: 215px;">
-                        <textarea class="textarea is-small  has-fixed-size" placeholder="1234567890128"
-                          rows="1" style="font-size: 25px; border: 2px solid black; "></textarea>
-                          <!-- is-primary -->
+                        <textarea id="barcode-input" lass="textarea is-small  has-fixed-size"
+                          placeholder="1234567890128" rows="1"
+                          style="font-size: 25px; border: 2px solid black; "></textarea>
+                        <!-- is-primary -->
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <!-- search button -->
-                <button class="button is-success is-large">Search!</button>
-
-
-                <!-- </div> -->
+                <button class="button is-success is-large submit-btn">Search!</button>
               </article>
             </div>
           </div>
         </div>
       </div>
   </div>
-  </div>
-  <!-- <a href='https://www.freepik.com/free-photos-vectors/background'>Background vector created by rawpixel.com -
-    www.freepik.com</a> -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
     integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="script.js"></script>
+
 </body>
-
-
 
 
 </html>
