@@ -10,152 +10,156 @@
 </head>
 
 <body>
-
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title has-text-centered">
-          Can I eat it?
-        </h1>
-        <h2 class="subtitle has-text-centered">
-          Want to eat something but have food allergy? We're here to help!
-        </h2>
+  <div class="container">
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">
+            Can I eat it?
+          </h1>
+          <h2 class="subtitle has-text-centered">
+            Want to eat something but have food allergy? We're here to help!
+          </h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- section for spacing -->
-  <section class="section">
-    <div class="container">
-      <!-- tiles for organization and appearance -->
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary has-text-centered">
-                <p class="title">1. Allergies!</p>
-                <p class="subtitle">Check your Allergies!</p>
-                <div class="dropdown allergy-dropdown">
-                  <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                      <span id="allergy-display">1. Allergies</span>
-                      <!-- <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span> -->
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                      <a class="dropdown-item allergy-item">
-                        Dairy
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Eggs
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Peanuts
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Soy
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Wheat
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Tree Nuts
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Fish
-                      </a>
-                      <a class="dropdown-item allergy-item">
-                        Shellfish
-                      </a>
+    <!-- section for spacing -->
+    <section class="section">
+      <div class="container">
+        <!-- tiles for organization and appearance -->
+        <!-- top level tile element -->
+        <div class="tile is-ancestor">
+          <!-- 2nd level tile element - arranges its sub-tiles vertically -->
+          <div class="tile is-vertical">
+            <!-- this tile contains 1. Allergies and 2. Category -->
+            <div class="tile">
+              <!-- parent tile of 1. Allergies -->
+              <div class="tile is-parent">
+                <!-- 1. Allergies tile -->
+                <article class="tile is-child notification  has-text-centered"
+                  style="background-color: #C6FFDD; border: 2px solid black;">
+                  <p class="title">1. Allergies!</p>
+                  <p class="subtitle">Check your Allergies!</p>
+                  <div class="dropdown allergy-dropdown">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span id="allergy-display">1. Allergies</span>
+                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a class="dropdown-item allergy-item">
+                          Dairy
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Eggs
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Peanuts
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Soy
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Wheat
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Tree Nuts
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Fish
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Shellfish
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-              </article>
-
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification  has-text-centered">
-                <!-- is-info -->
-                <p class="title">2. Category!</p>
-                <p class="subtitle">What are you eating?</p>
-                <div class="dropdown category-dropdown">
-                  <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                      <span id="category-display">2. Category!</span>
-                      <!-- <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span> -->
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                      <a class="dropdown-item category-item">
-                        Breakfast
-                      </a>
-                      <a class="dropdown-item category-item">
-                        Lunch
-                      </a>
-                      <a class="dropdown-item category-item">
-                        Dinner
-                      </a>
-                      <a class="dropdown-item category-item">
-                        Snack
-                      </a>
-                      <a class="dropdown-item category-item">
-                        Drink
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                  </figure> -->
-              </article>
-            </div>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification has-text-centered">
-              <!-- is-danger -->
-              <p class="title">3. Barcode!</p>
-              <p class="subtitle">Enter the barcode!</p>
-              <!-- <div class="content"> -->
-              <!-- Content -->
-              <h2 class="has-text-centered">Find it here!</h2>
-              <!-- barcode image -->
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
-                style="height: 150px; width: 200px; background-color: white; border-style: solid; border-color: black; border-radius: 5px;;">
-              <!-- barcode input -->
-              <div class="field">
-                <div class="control" style="width: 215px;">
-                  <textarea id="barcode-input" class="textarea is-small is-primary has-fixed-size"
-                    placeholder="1234567890128" rows="1" style="font-size: 25px;"></textarea>
-                </div>
+                </article>
               </div>
-              <!-- search button -->
-              <button class="button is-success is-large submit-btn">Search!</button>
+              <!-- parent tile of 2. Category! -->
+              <div class="tile is-parent">
+                <!-- 2. Category Tile -->
+                <article class="tile is-child notification has-text-centered"
+                  style="background-color: #FBD786; border: 2px solid black;">
+                  <p class="title">2. Category!</p>
+                  <p class="subtitle">What are you eating?</p>
+                  <div class="dropdown category-dropdown">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span id="category-display">2. Category!</span>
+                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a class="dropdown-item category-item">
+                          Breakfast
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Lunch
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Dinner
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Snack
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Drink
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
 
-
-              <!-- </div> -->
-            </article>
+            <!-- parent tile of 3. Barcode! -->
+            <div class="tile is-parent">
+              <!-- Barcode tile! -->
+              <article class="tile is-child notification has-text-centered"
+                style="background-color: #f7797d; color: white; border: 2px solid black;">
+                <!-- is-danger -->
+                <p class="title">3. Barcode!</p>
+                <p class="subtitle">Enter the barcode UPC!</p>
+                <!-- <div class="content"> -->
+                <!-- Content -->
+                <h2 class="has-text-centered" style="font-size: 20px;">Find it here!</h2>
+                <!-- barcode image -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
+                  style="height: 161px; width: 215px; background-color: white; border-style: solid; border-color: black; border-radius: 5px;;">
+                <!-- barcode input -->
+                <!-- columns -> column setup is required to get the textarea input centered -->
+                <div class="columns is-mobile is-centered">
+                  <div class="column is-narrow">
+                    <div class="field">
+                      <div class="control" style="width: 215px;">
+                        <textarea id="barcode-input" lass="textarea is-small  has-fixed-size"
+                          placeholder="1234567890128" rows="1"
+                          style="font-size: 25px; border: 2px solid black; "></textarea>
+                        <!-- is-primary -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- search button -->
+                <button class="button is-success is-large submit-btn">Search!</button>
+              </article>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
+  </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
-      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
 </body>
-
-
 
 
 </html>
