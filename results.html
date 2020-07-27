@@ -29,9 +29,10 @@
         <div class="tile is-vertical">
           <div class="tile">
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary has-text-centered">
+              <article id="input" class="tile is-child notification is-primary has-text-centered">
                 <div class="dropdown search-dropdown">
                   <div class="dropdown-trigger">
+                    <label class="label">Search History</label>
                     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                       <span>Search History</span>
                       <span class="icon is-small">
@@ -48,16 +49,18 @@
             </div>
 
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary has-text-centered">
+              <article id="input" class="tile is-child notification is-primary has-text-centered">
                 <div class="control">
+                  <label class="label">Allergy Input</label>
                   <input class="input has-text-centered" id="allergyInput" type="text" value="Allergy Input" readonly>
                 </div>
               </article>
             </div>
 
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary has-text-centered">
+              <article id="input" class="tile is-child notification is-primary has-text-centered">
                 <div class="control">
+                  <label class="label">Food Category Input</label>
                   <input class="input has-text-centered" id="categoryInput" type="text" value="Food Category Input"
                     readonly>
                 </div>
@@ -65,8 +68,9 @@
             </div>
 
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary has-text-centered">
+              <article id="input" class="tile is-child notification is-primary has-text-centered">
                 <div class="control">
+                  <label class="label">Item Input</label>
                   <input class="input has-text-centered" id="itemInput" type="text" value="Food Item Input" readonly>
                 </div>
               </article>
@@ -75,7 +79,7 @@
           </div>
 
           <div class="tile is-parent">
-            <article class="tile is-child notification has-text-centered">
+            <article class="tile is-child notification is-light-title has-text-centered">
              
               <p id="resultPhrase" class="title">Results!</p>
              
@@ -85,7 +89,7 @@
               <img id="food-img" src="#" style="height: 150px; width: auto;">
               <!-- barcode input -->
 
-              <p class="title">Alternatives in food category</p>
+              <p class="title" style="color: black;">Alternatives in food category</p>
               <img src="#" style="height: 150px; width: 200px;">
               <img src="#" style="height: 150px; width: 200px;">
               <p class="link">If you don't like these, check out this page for more suggestions!</p>
