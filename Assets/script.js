@@ -53,11 +53,7 @@ function convertAllergy(allergy) {
     } else if (allergy == "Wheat") {
         allergyInput = "WHEAT_FREE";
     } else if (allergy == "Tree Nuts") {
-        allergyInput = "TREE_NUT_FREE";
-    } else if (allergy == "Fish") {
-        allergyInput = "FISH_FREE";
-    } else if (allergy == "Shellfish") {
-        allergyInput = "SHELLFISH_FREE";
+        allergyInput = "TREE_NUT_FREE";    
     }
 }
 //Function to reach API 
