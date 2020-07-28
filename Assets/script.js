@@ -30,14 +30,16 @@ $(document).ready(function () { //once the HTML is loaded:
     });
 
     $('.submit-btn').on('click', function () { //when search is clicked, validate that they selected inputs, else alert them
-        if (!allergyInput) { 
-            alert("Don't forget to choose your allergy!")
+        if (!allergyInput) {
+            displayModal("Don't forget to choose your allergy!")//alert("Don't forget to choose your allergy!")
         } else if (!categoryInput) {
-            alert("Don't forget to choose your food category/type!")
+            displayModal("Don't forget to choose your food category/type!")//alert("Don't forget to choose your food category/type!")
         } else {
             getfoodID();
         }
-    }); 
+    });
+
+
 });
 
 //Function to change allergy to correct format
@@ -77,7 +79,7 @@ function getfoodID() {
             foodImg = response.hints[0].food.image; //get food image of user's barcode input
             getHealthLabel(foodID); //run function to get health labels
         }).fail(function () {//if bad request or request fails
-            alert("Hmmm...we can't find this item, try again") //alert user to try again
+            displayModal("Hmmm...we can't find this item, try again");//alert("Hmmm...we can't find this item, try again") //alert user to try again
         });
 }
 
@@ -96,13 +98,13 @@ function getHealthLabel(foodID) {
         headers: {
             "Content-Type": "application/json" //reuqired by Edamam API
         },
-        data: JSON.stringify(foodJSON), 
+        data: JSON.stringify(foodJSON),
     })
         .then(function (response) {
             var healthLabelsArray = response.healthLabels; //Get health labels (e.g. DAIRY-FREE)
             var safe = healthLabelsArray.indexOf(allergyInput); //find index of user's allergy
             if (safe < 0) { //if the health labels does not include the user's allergy (if index is -1)
-                safeToEat = "false"; 
+                safeToEat = "false";
             } else {
                 safeToEat = "true";
             }
@@ -128,3 +130,31 @@ function storeData() {
 function resultsScreen() {
     window.location.href = "./results.html"; //redirect to Results Page
 }
+
+// Modals JS control
+var rootE1 = $(document.documentElement);
+// call displayModal("") instead of alert("")
+function displayModal(inputString) {
+    rootE1.addClass("is-clipped"); //webpage document gets clipped
+    $(".modal").addClass("is-active");
+    $(".modal-content").text(inputString);
+}
+
+function closeModal() {
+    rootE1.removeClass("is-clipped");
+    $(".modal").removeClass("is-active");
+}
+
+//if the user presses esc, close the modal
+//suggested by Bulma CSS
+document.addEventListener("keydown", function (event) {
+    var e = event || window.event;
+    if (e.keyCode === 27) {
+        closeModal();
+    }
+})
+//close modal if use clicks background or the 'X' in the top right corner
+$('.modal-background').on('click', function() { closeModal() });
+$('.modal-close').on('click', function() { closeModal() });
+
+
