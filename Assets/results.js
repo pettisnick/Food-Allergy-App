@@ -53,7 +53,7 @@ function renderResult(itemObject) {
 //Function to update history
 function renderHistory(list){
     list.forEach(function (food) {
-        var itemEl = $("<a class='history-item'>");
+        var itemEl = $("<a class='history-item dropdown-item'>");
         itemEl.text(food);
         $(".history-content").append(itemEl);    
     })
@@ -71,7 +71,7 @@ function alternatives(itemObject){
     }else if (allergySearch === "Dairy" && res === "false" && searchCat === "Snack"){
        $("#firstAlt").attr("src", "./Assets/Substitutes/dairy-free.jpg");
        $("#secondAlt").attr("src", "./Assets/Substitutes/dairy-free2.jpg");
-    }else if (allergySearch === "Dairy" && res === "false" && searchCat === "Drink"){
+    }else if (res === "false" && searchCat === "Drink"){
        $("#firstAlt").attr("src", "./Assets/Substitutes/dairy-free-drink.png");
        $("#secondAlt").attr("src", "./Assets/Substitutes/dairy-free-drink2.jpg");
     }else if (allergySearch === "Eggs" && res === "false"){
@@ -90,9 +90,8 @@ function alternatives(itemObject){
         $(".link").addClass("display-none")
         $("#firstAlt").addClass("display-none")
         $("#secondAlt").addClass("display-none")
-        $("#alt-food").text("Great Choice!")
-       //  document.getElementById("firstAlt").style.display= "none";
-       //  document.getElementById("secondAlt").style.display= "none";
+        $("#alt-food").text("Want to find more allergen free brands? Click the link below.")
+     
     }
     console.log(itemObject)
    }  
