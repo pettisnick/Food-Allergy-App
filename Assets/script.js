@@ -137,7 +137,9 @@ var rootE1 = $(document.documentElement);
 function displayModal(inputString) {
     rootE1.addClass("is-clipped"); //webpage document gets clipped
     $(".modal").addClass("is-active");
-    $(".modal-content").text(inputString);
+    $(".modal").addClass("is-clipped");
+    console.log(inputString);
+    $(".modal-text").text(inputString);
 }
 
 function closeModal() {

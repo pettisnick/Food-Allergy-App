@@ -10,7 +10,18 @@
 </head>
 
 <body>
+  <!-- Modal for alerts -->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content has-text-centered">
+      <button class="button is-danger" style="background-color: red;"><span class="modal-text" style="font-size: 25px;"></span></button>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+<!-- page start -->
   <div class="container">
+    <!-- top banner -->
     <section class="hero is-primary is-bold">
       <div class="hero-body">
         <div class="container">
@@ -45,7 +56,6 @@
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span id="allergy-display">1. Allergies</span>
-                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -68,17 +78,18 @@
                         <a class="dropdown-item allergy-item">
                           Tree Nuts
                         </a>
-                        <a class="dropdown-item allergy-item">
+                        <!-- <a class="dropdown-item allergy-item">
                           Fish
                         </a>
                         <a class="dropdown-item allergy-item">
                           Shellfish
-                        </a>
+                        </a> -->
                       </div>
                     </div>
                   </div>
                 </article>
               </div>
+              
               <!-- parent tile of 2. Category! -->
               <div class="tile is-parent">
                 <!-- 2. Category Tile -->
@@ -90,7 +101,6 @@
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span id="category-display">2. Category!</span>
-                        <!-- <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span> -->
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -122,11 +132,8 @@
               <!-- Barcode tile! -->
               <article class="tile is-child notification has-text-centered"
                 style="background-color: #f7797d; color: white; border: 2px solid black;">
-                <!-- is-danger -->
                 <p class="title">3. Barcode!</p>
                 <p class="subtitle">Enter the barcode UPC!</p>
-                <!-- <div class="content"> -->
-                <!-- Content -->
                 <h2 class="has-text-centered" style="font-size: 20px;">Find it here!</h2>
                 <!-- barcode image -->
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
@@ -137,8 +144,9 @@
                   <div class="column is-narrow">
                     <div class="field">
                       <div class="control" style="width: 215px;">
-                        <textarea id="barcode-input" class="textarea is-small has-fixed-size" placeholder="1234567890128" rows="1" style="font-size: 25px; border: 2px solid black; "></textarea>
-                        <!-- is-primary -->
+                        <textarea id="barcode-input" class="textarea is-small has-fixed-size"
+                          placeholder="1234567890128" rows="1"
+                          style="font-size: 20px; border: 2px solid black; "></textarea>
                       </div>
                     </div>
                   </div>
@@ -151,17 +159,6 @@
         </div>
       </div>
   </div>
-
-
-<!-- Modal for alerts -->
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
-
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
