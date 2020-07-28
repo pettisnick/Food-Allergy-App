@@ -1,5 +1,7 @@
 //Declare global variables
 var foodName, userAllergy, allergyInput, categoryInput, upcInput, foodImg, safeToEat;
+var appID = "64be3214";
+var key = "a686c7f46157229e5073aeea40465ccd";
 var userSearch = JSON.parse(localStorage.getItem("userSearch")); //get search array from local storage
 if (!userSearch) { //if search array is undefined
     userSearch = new Array(); //create a new empty array
@@ -33,7 +35,7 @@ $(document).ready(function () { //once the HTML is loaded:
         } else if (!categoryInput) {
             alert("Don't forget to choose your food category/type!")
         } else {
-            getData();
+            getfoodID();
         }
     }); 
 });
@@ -59,10 +61,7 @@ function convertAllergy(allergy) {
     }
 }
 //Function to reach API 
-function getData() {
-    var appID = "64be3214";
-    var key = "a686c7f46157229e5073aeea40465ccd";
-    var allergy = allergyInput;
+function getfoodID() {
     upcInput = $("#barcode-input").val().trim(); //save barcode in variable
     var edamamURL = "https://api.edamam.com/api/food-database/v2/parser?upc=" + upcInput + "&app_id=" + appID + "&app_key=" + key;
 
@@ -80,36 +79,37 @@ function getData() {
         }).fail(function () {//if bad request or request fails
             alert("Hmmm...we can't find this item, try again") //alert user to try again
         });
-
-    // Function to create the JSON object for the Edamam API push request, and execution
-    function getHealthLabel(foodID) {
-        var foodJSON = {}; //create object for Edamam API 
-        var ingredientsArray = new Array(); //create array
-        var foodObject = { foodId: foodID }; //create food Object
-        ingredientsArray.push(foodObject); //add to array
-        foodJSON.ingredients = ingredientsArray; //foodJSON with property 'ingredients' has value of ingredientsArray
-        var url = "https://api.edamam.com/api/food-database/v2/nutrients?app_id=" + appID + "&app_key=" + key;
-
-        $.ajax({
-            method: "POST", //post request per Edamam API to get health labels
-            url: url,
-            headers: {
-                "Content-Type": "application/json" //reuqired by Edamam API
-            },
-            data: JSON.stringify(foodJSON), 
-        })
-            .then(function (response) {
-                var healthLabelsArray = response.healthLabels; //Get health labels (e.g. DAIRY-FREE)
-                var safe = healthLabelsArray.indexOf(allergy); //find index of user's allergy
-                if (safe < 0) { //if the health labels does not include the user's allergy (if index is -1)
-                    safeToEat = "false"; 
-                } else {
-                    safeToEat = "true";
-                }
-                storeData(); //call function to store data in local storage
-            });
-    }
 }
+
+// Function to create the JSON object for the Edamam API push request, and execution
+function getHealthLabel(foodID) {
+    var foodJSON = {}; //create object for Edamam API 
+    var ingredientsArray = new Array(); //create array
+    var foodObject = { foodId: foodID }; //create food Object
+    ingredientsArray.push(foodObject); //add to array
+    foodJSON.ingredients = ingredientsArray; //foodJSON with property 'ingredients' has value of ingredientsArray
+    var url = "https://api.edamam.com/api/food-database/v2/nutrients?app_id=" + appID + "&app_key=" + key;
+
+    $.ajax({
+        method: "POST", //post request per Edamam API to get health labels
+        url: url,
+        headers: {
+            "Content-Type": "application/json" //reuqired by Edamam API
+        },
+        data: JSON.stringify(foodJSON), 
+    })
+        .then(function (response) {
+            var healthLabelsArray = response.healthLabels; //Get health labels (e.g. DAIRY-FREE)
+            var safe = healthLabelsArray.indexOf(allergyInput); //find index of user's allergy
+            if (safe < 0) { //if the health labels does not include the user's allergy (if index is -1)
+                safeToEat = "false"; 
+            } else {
+                safeToEat = "true";
+            }
+            storeData(); //call function to store data in local storage
+        });
+}
+
 //Function to store in Local Storage
 function storeData() {
     var foodObject = { //store data as an object that Results Page can use
