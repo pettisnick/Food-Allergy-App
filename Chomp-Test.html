@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>check console</h2>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var nameInput = "planter's trail mix";
+            nameInput = nameInput.replace("%20", " ").replace("\'", "");//encodeURI(nameInput);//$("#barcode-input").val().trim(); //save barcode in variable
+            var chompURL = "https://chompthis.com/api/v2/food/branded/name.php?name=" + nameInput + "&limit=1&page=1&api_key=16A1EjS632mfk1Bs6";
+
+            $.get({
+                url: chompURL
+            })
+                .done(function (response) {
+                    console.log("Inside done");
+                    console.log(response);
+                    var upcBarcode = response.items[0].barcode;
+                    console.log(upcBarcode);
+                    var itemName = response.items[0].name;
+                    console.log(itemName);
+                }).fail(function () {
+                     alert("Please try again");
+                });
+        }
+        );
+    </script>
+</body>
+
+</html>
