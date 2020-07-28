@@ -28,7 +28,6 @@ function displaySelect(event) {
 
 //Function to update search criteria display
 function renderSearchCriteria(itemObject) {
-    console.log(itemObject.allergy);
     $("#allergyInput").attr("value", itemObject.allergy);
     $("#categoryInput").attr("value", itemObject.category);
     $("#itemInput").attr("value", itemObject.name);
