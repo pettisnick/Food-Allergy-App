@@ -23,11 +23,13 @@ html,body
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* screen widths more than 768px, hr is 0% wide */
 .flex-container hr
 {
     width: 0%;
 }
-.flex-item
+.allergy-icon
 {
    height: 12%;
    width: 12%;
@@ -41,6 +43,13 @@ html,body
 {
     height: 30%; 
     width: 20%;
+}
+
+/* applies border for allergy icon focus*/
+.icon-has-focus
+{
+    border: 10px solid yellow;
+    border-radius: 25px;
 }
 
 /* below 441px, set question-img height/width to 0px*/
@@ -61,7 +70,7 @@ html,body
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .flex-item
+    .allergy-icon
     {
         height: 15%;
         width: 15%;
