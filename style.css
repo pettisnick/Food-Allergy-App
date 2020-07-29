@@ -43,13 +43,13 @@ html,body
     width: 20%;
 }
 
-/* below 441px, hide the images */
+/* below 441px, set question-img height/width to 0px*/
 @media only screen and (max-width: 440px){
-.question-img
-{
-    height: 0px;
-    width: 0px;
-}
+    .question-img
+    {
+        height: 0px;
+        width: 0px;
+    }
 }
 
 /* at 768px and below, force two rows in flexbox */
@@ -70,8 +70,8 @@ html,body
 
 /* below 1024px, hide overflow-x */
 @media only screen and (max-width: 1023px){
-html,body
-{
-    overflow-x: hidden;
-}
+    html,body
+    {
+        overflow-x: hidden;
+    }
 }
