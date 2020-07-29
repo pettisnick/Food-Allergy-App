@@ -5,6 +5,22 @@ html {
     background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#resultPhrase {
-    back
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.question-img{
+    height: 30%; 
+    width: 20%;
+}
+
+@media only screen and (max-width: 440px){
+.question-img{
+    height: 0px;
+    width: 0px;
+}
 }

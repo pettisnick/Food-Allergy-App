@@ -14,17 +14,22 @@
   <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content has-text-centered">
-      <button class="button is-danger" style="background-color: red;"><span class="modal-text" style="font-size: 25px;"></span></button>
+      <button class="button is-danger" style="background-color: red;"><span class="modal-text"
+          style="font-size: 25px;"></span></button>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-<!-- page start -->
+  <!-- page start -->
   <div class="container">
     <!-- top banner -->
     <section class="hero is-primary is-bold">
+      <!-- is-primary -->
       <div class="hero-body">
         <div class="container">
+          <div class="has-text-centered">
+            <img src="Assets/header.png" style="height: 50%; width: 50%"></img>
+          </div>
           <h1 class="title has-text-centered">
             Can I eat it?
           </h1>
@@ -35,8 +40,13 @@
       </div>
     </section>
 
+    <!-- <section class="section"> -->
+      <div class="has-text-centered" style="margin-top: 10px; margin-bottom: 10px;">
+        <img src="Assets/allergens_icons.png" style="height: 50%; width: 50%"></img>
+      </div>
+    <!-- </section> -->
     <!-- section for spacing -->
-    <section class="section">
+    <!-- <section class="section"> -->
       <div class="container">
         <!-- tiles for organization and appearance -->
         <!-- top level tile element -->
@@ -55,7 +65,7 @@
                   <div class="dropdown allergy-dropdown">
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span id="allergy-display">1. Allergies</span>
+                        <span id="allergy-display">Allergies</span>
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -89,7 +99,6 @@
                   </div>
                 </article>
               </div>
-              
               <!-- parent tile of 2. Category! -->
               <div class="tile is-parent">
                 <!-- 2. Category Tile -->
@@ -100,7 +109,7 @@
                   <div class="dropdown category-dropdown">
                     <div class="dropdown-trigger">
                       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span id="category-display">2. Category!</span>
+                        <span id="category-display">Category</span>
                       </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -133,11 +142,13 @@
               <article class="tile is-child notification has-text-centered"
                 style="background-color: #f7797d; color: white; border: 2px solid black;">
                 <p class="title">3. Barcode!</p>
-                <p class="subtitle">Enter the barcode UPC!</p>
-                <h2 class="has-text-centered" style="font-size: 20px;">Find it here!</h2>
+                <p class="subtitle">Enter the barcode numbers that you see on your food item!</p>
+                <h2 class="has-text-centered" style="font-size: 20px;">Find the 12 digit number like the one below!</h2>
+                <img src="Assets/questionmarks1.png" class="question-img"></img>
                 <!-- barcode image -->
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
                   style="height: 161px; width: 215px; background-color: white; border-style: solid; border-color: black; border-radius: 5px;;">
+                  <img src="Assets/questionmarks1.png" class="question-img" ></img>
                 <!-- barcode input -->
                 <!-- columns -> column setup is required to get the textarea input centered -->
                 <div class="columns is-mobile is-centered">
@@ -151,6 +162,7 @@
                     </div>
                   </div>
                 </div>
+                
                 <!-- search button -->
                 <button class="button is-success is-large submit-btn">Search!</button>
               </article>
@@ -158,6 +170,7 @@
           </div>
         </div>
       </div>
+    <!-- </section> -->
   </div>
 
 
