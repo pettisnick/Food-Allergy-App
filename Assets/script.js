@@ -23,7 +23,7 @@ $(document).ready(function () { //once the HTML is loaded:
         $('#allergy-display').text(userAllergy); //change the dropdown button to display user selection
         convertAllergy(userAllergy); //call function to put allergy in format of API
         $('.allergy-icon').removeClass('icon-has-focus'); //remove focus styling class on all allergy icons
-        $('#'+userAllergy.replace(" ", "-")).addClass('icon-has-focus'); //add focus styling to clicked icon
+        $('#'+userAllergy.replace(' ', '-')).addClass('icon-has-focus'); //add focus styling to clicked icon
         //replace formats the ID of certain elements correctly, i.e. 'Tree Nuts' to 'Tree-Nuts'
         //userAllergy.replace() does not change the stored value of userAllergy
     });
