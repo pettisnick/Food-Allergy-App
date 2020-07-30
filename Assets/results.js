@@ -36,18 +36,35 @@ function renderSearchCriteria(itemObject) {
 }
 //Function to update main result (to eat or not eat)
 function renderResult(itemObject) {
-    var foodImgUrl = itemObject.image;
+    var foodImgUrl = itemObject.image;    
+    
     $("#food-img").attr("src", foodImgUrl);
     $("#food-img").attr("alt", "image of food");
     var result = itemObject.searchResult;
     if (result == "true") {
-        $("#resultPhrase").text("You're good to go. Enjoy!");
+        $("#resultPhrase").text("You're good to go. Enjoy!");        
+        $("#results-img").attr("src", "https://media3.giphy.com/media/eIrH2RUEm1NwSZHhes/giphy.gif");
     } else {
         $("#resultPhrase").text("Stop! " + itemObject.name + " has " + itemObject.allergy);
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=no+cat&api_key=qBWL2Js6Ez50NdhryP2veob5yvKCWh3W&limit=1";
+        // Perfoming an AJAX GET request to our queryURL
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+          })
+          
+          // After the data from the AJAX request comes back
+            .then(function(response) {
+          
+            // Saving the image_original_url property
+              var imageUrl = response.data[0].images.original.url;
+              
+  
+              $("#results-img").attr("src", imageUrl)
+          
+          
+            });
     }
-    var imgUrl = "./Assets/" + result + ".png";
-    $("#results-img").attr("src", imgUrl);
-    $("#results-img").attr("alt", "image with sign of result");
    
 }
 //Function to update history
@@ -58,6 +75,7 @@ function renderHistory(list){
         $(".history-content").append(itemEl);    
     })
 }
+
 function alternatives(itemObject){
     let allergySearch = itemObject.allergy;
     let res = itemObject.searchResult;
@@ -90,10 +108,10 @@ function alternatives(itemObject){
         $(".link").addClass("display-none")
         $("#firstAlt").addClass("display-none")
         $("#secondAlt").addClass("display-none")
-        $("#alt-food").text("Want to find more allergen free brands? Click the link below.")
+        $("#alt-food").text("Click the link below to find more allergy friendly brands.")
      
     }
-    console.log(itemObject)
+
    }  
 
 //Function to redirect
