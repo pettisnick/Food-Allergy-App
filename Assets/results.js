@@ -46,7 +46,7 @@ function renderResult(itemObject) {
         $("#results-img").attr("src", "https://media3.giphy.com/media/eIrH2RUEm1NwSZHhes/giphy.gif");
     } else {
         $("#resultPhrase").text("Stop! " + itemObject.name + " has " + itemObject.allergy);
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=no+cat&api_key=qBWL2Js6Ez50NdhryP2veob5yvKCWh3W&limit=1";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=no+cat&api_key=qBWL2Js6Ez50NdhryP2veob5yvKCWh3W&limit=1";
         // Perfoming an AJAX GET request to our queryURL
         $.ajax({
             url: queryURL,
@@ -80,8 +80,8 @@ function alternatives(itemObject){
     let allergySearch = itemObject.allergy;
     let res = itemObject.searchResult;
     let searchCat = itemObject.category;
-    console.log(searchCat)
-    console.log(allergySearch)
+    //console.log(searchCat)
+    //console.log(allergySearch)
     
     if (allergySearch === "Peanuts" && res === "false"){
         $("#firstAlt").attr("src", "./Assets/Substitutes/peanut-free.jpg");
