@@ -75,6 +75,11 @@ html,body
         height: 15%;
         width: 15%;
     }
+    .icon-has-focus
+{
+    border: 5px solid yellow;
+    border-radius: 15px;
+}
 }
 
 /* below 1024px, hide overflow-x */
