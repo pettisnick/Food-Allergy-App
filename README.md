@@ -2,6 +2,7 @@
 
 A kid-friendly web application that allows kids to check if a food item is safe for their allergies before consumption and suggests alternatives if not.
 
+[Deployed Link](https://pettisnick.github.io/Food-Allergy-App/)
 
 ## User Story
 AS a young student who has a food allergy.
